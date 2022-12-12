@@ -5,15 +5,44 @@
 {% block content %}
 <div class="grad"></div>
 
-    <section id="signup">
+    <section id="signUp">
         <p class="heading">create add</p>
-        <form method="post">
+        <form method="POST" class='signUpForm'>
           {% csrf_token %}
-          <input type="text" placeholder="addres" name="addres" required class="inputField"/>
-          <input type="number" placeholder="price" name="price" required class="inputField"/>
-          <input type="number" placeholder="weating hours" name="weating" required class="inputField"/>
-          <input type="number" placeholder="working hours" name="working" id="" required class="inputField">
-          <input type="tel" placeholder="phone number" name="phone" required class="inputField" />
+
+          <div>
+            {{form.address.label}}
+            {{form.address}}
+          
+
+          </div>
+          
+          <div>
+            {{form.weatingHours.label}}
+            {{form.weatingHours}}
+          
+          </div>
+
+          <div>
+          {{form.price.label}}
+          {{form.price}}
+            
+          </div>
+
+          <div>
+            {{form.workingHours.label}}
+            {{form.workingHours}}
+
+          </div>
+          <div>
+            {{form.errors}}
+          </div>
+          
+
+
+
+          
+          
           
           
           

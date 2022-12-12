@@ -8,7 +8,7 @@
     <h1> create your profile </h1>
 
 
-    <form method="POST" class='signUpForm'>
+    <form method="POST" class='signUpForm' enctype="multipart/form-data">
 
         {% csrf_token %}
     
@@ -24,6 +24,17 @@
     <div>
         {{epif.img.label}}
         {{epif.img}}
+    
+    </div>
+    
+    <div>
+        {{epif.are_you_doctor.label}}
+        {{epif.are_you_doctor}}
+    
+    </div>
+    <div>
+        {{epif.errors}}
+        
     
     </div>
     

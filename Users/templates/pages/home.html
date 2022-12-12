@@ -5,41 +5,44 @@
 <div class="grad"></div>
 
 
-<h1>{{cond}}</h1>
+<h1>{{check}}</h1>
   <section id="view" data-highlight="false">
+    
+    {% for card in cards %}
+    {% comment %} {% include 'parts/landing.html'%} {% endcomment %}
     <div class="card">
       <div class="top">
-        <p class="name">soliman elmasry</p>
+        <p class="name">{{card.user.first_name}}</p>
       </div>
       <div class="bottom">
         <span class="left">
-          <img src="{% static 'img/doc.jpg' %}" alt="" class="DocImg" />
+          {% comment %} <img src="{{'media'}}\{{x.img}}" alt="" class="DocImg" /> {% endcomment %}
         </span>
         <span class="mid">
           <ul data-highlight="false">
             <li>
               <img src="{% static 'img/dental-care.png' %}" alt="" />
-              location
+              {{card.address}}
             </li>
             <li>
               <img src="{% static 'img/dental-care.png' %}" alt="" />
 
-              price
+              {{card.price}}
             </li>
             <li>
               <img src="{% static 'img/dental-care.png' %}" alt="" />
 
-              waeting
+              {{card.weatingHours}}
             </li>
             <li>
               <img src="{% static 'img/dental-care.png' %}" alt="" />
 
-              working hours
+              {{card.workingHours}}
             </li>
             <li>
               <img src="{% static 'img/dental-care.png' %}" alt="" />
 
-              phone number
+              {% comment %} {{x.phone}} {% endcomment %}
             </li>
           </ul>
         </span>
@@ -47,130 +50,17 @@
           <a href="" class="book">book now</a>
         </span>
       </div>
+     
     </div>
-    <div class="card">
-      <div class="top">
-        <p class="name">soliman elmasry</p>
-      </div>
-      <div class="bottom">
-        <span class="left">
-          <img src="{% static 'img/doc.jpg' %}" alt="" class="DocImg" />
-        </span>
-        <span class="mid">
-          <ul data-highlight="false">
-            <li>
-              <img src="{% static 'img/dental-care.png' %}" alt="" />
-              location
-            </li>
-            <li>
-              <img src="{% static 'img/dental-care.png' %}" alt="" />
+      
+    
+      
+    
+    {% endfor %}
+      
 
-              price
-            </li>
-            <li>
-              <img src="{% static 'img/dental-care.png' %}" alt="" />
-
-              waeting
-            </li>
-            <li>
-              <img src="{% static 'img/dental-care.png' %}" alt="" />
-
-              working hours
-            </li>
-            <li>
-              <img src="{% static 'img/dental-care.png' %}" alt="" />
-
-              phone number
-            </li>
-          </ul>
-        </span>
-        <span class="right">
-          <a href="" class="book">book now</a>
-        </span>
-      </div>
-    </div>
-    <div class="card">
-      <div class="top">
-        <p class="name">soliman elmasry</p>
-      </div>
-      <div class="bottom">
-        <span class="left">
-          <img src="{% static 'img/doc.jpg' %}" alt="" class="DocImg" />
-        </span>
-        <span class="mid">
-          <ul data-highlight="false">
-            <li>
-              <img src="{% static 'img/dental-care.png' %}" alt="" />
-              location
-            </li>
-            <li>
-              <img src="{% static 'img/dental-care.png' %}" alt="" />
-
-              price
-            </li>
-            <li>
-              <img src="{% static 'img/dental-care.png' %}" alt="" />
-
-              waeting
-            </li>
-            <li>
-              <img src="{% static 'img/dental-care.png' %}" alt="" />
-
-              working hours
-            </li>
-            <li>
-              <img src="{% static 'img/dental-care.png' %}" alt="" />
-
-              phone number
-            </li>
-          </ul>
-        </span>
-        <span class="right">
-          <a href="" class="book">book now</a>
-        </span>
-      </div>
-    </div>
-    <div class="card">
-      <div class="top">
-        <p class="name">soliman elmasry</p>
-      </div>
-      <div class="bottom">
-        <span class="left">
-          <img src="{% static 'img/doc.jpg' %}" alt="" class="DocImg" />
-        </span>
-        <span class="mid">
-          <ul data-highlight="false">
-            <li>
-              <img src="{% static 'img/dental-care.png' %}" alt="" />
-              location
-            </li>
-            <li>
-              <img src="{% static 'img/dental-care.png' %}" alt="" />
-
-              price
-            </li>
-            <li>
-              <img src="{% static 'img/dental-care.png' %}" alt="" />
-
-              waeting
-            </li>
-            <li>
-              <img src="{% static 'img/dental-care.png' %}" alt="" />
-
-              working hours
-            </li>
-            <li>
-              <img src="{% static 'img/dental-care.png' %}" alt="" />
-
-              phone number
-            </li>
-          </ul>
-        </span>
-        <span class="right">
-          <a href="" class="book">book now</a>
-        </span>
-      </div>
-    </div>
+    
+    
   </section>
   <section id="testmon">
     <div class="tcard">
