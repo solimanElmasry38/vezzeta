@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="grad"></div>
+
+
+{% comment %} <img src="{{myprofile.img.url}}" alt="">
+
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p> {% endcomment %}
+
+
+<section id="profile">
+    <div id="profCard">
+        <div class="top">
+            <img src="{{myprofile.img.url}}" alt="">
+        </div>
+        <ul class="mid">
+            <li>username: {{myprofile.user.username}}</li>
+            <li>email: {{myprofile.user.email}}</li>
+            <li>first_name: {{myprofile.user.first_name}}</li>
+            <li>last_name: {{myprofile.user.last_name}}</li>
+            <li>phone: {{myprofile.phone}}</li>
+        </ul>
+        <div class="bottom">
+            <a href="{% url 'EditeUserInfo' %}" class="button">edite profile</a>
+        </div>
+    </div>
+    {{h}}
+</section>
+
+
+{% endblock content %}

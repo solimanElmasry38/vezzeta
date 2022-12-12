@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="grad"></div>
+
+<section id="signUp">
+    <h1> create your profile </h1>
+
+
+    <form method="POST" class='signUpForm'>
+
+        {% csrf_token %}
+    
+    
+    <h1>select image for your profile</h1>
+    <div>
+        {{epif.phone.label}}
+        {{epif.phone}}
+    
+    </div>
+    <h1>set your Phone number</h1>
+    
+    <div>
+        {{epif.img.label}}
+        {{epif.img}}
+    
+    </div>
+    
+    <input type="submit" value="done" class="submit">
+    
+    </form>
+    
+    
+
+</section>
+
+
+
+
+
+{% endblock content %}

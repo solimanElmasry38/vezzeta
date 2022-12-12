@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+<div class="grad"></div>
+
+<section id="signUp">
+
+  <h1>Log in </h1>
+
+
+  <form method="POST" class='signUpForm'>
+
+      {% csrf_token %}
+      <div>
+        <label>user name</label>
+        <input name="username" type="text">
+      </div>
+      <div>
+          <label>password</label>
+          <input name="password" type="password">
+      </div>
+  
+      
+      <input type="submit" value="log in" class="submit">
+    </form>
+
+
+
+  
+    {% comment %} {{cond}} {% endcomment %}
+
+
+    <p class="sign">not have an account <a href="{% url 'signUp' %}">sign up</a></p>
+
+
+</section>
+   
+
+
+{% endblock content %}
+
+

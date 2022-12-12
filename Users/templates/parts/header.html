@@ -1,0 +1,36 @@
+{% load static %}
+
+<header>
+    <nav>
+      <a href="{% url 'home' %}" class="logo">
+        <img src="{% static 'img/dental-care.png' %}" alt="" />
+        <p>vezeta</p>
+      </a>
+
+      <ul class="nav">
+        <li><a href="">home</a></li>
+        <li><a href="">about</a></li>
+        <li><a href="">contact</a></li>
+        <li><a href="">services</a></li>
+        <li><a href="">portfolio</a></li>
+
+        {% if cond %}
+        <li><a href="{% url 'logOut' %}">log out</a></li>
+        <li><a href="{% url 'profile' %}">{{request.user}}</a></li>
+
+ 
+    {% else %}
+    <li><a href="{% url 'logIn' %}">log in</a></li>
+    
+    <li><a href="{% url 'signUp' %}">sign up</a></li>
+    {% endif %}
+
+
+
+
+
+
+        
+      </ul>
+    </nav>
+  </header>

@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="grad"></div>
+    <section id="signUp">
+        <p class="heading">sign up</p>
+        <form method="POST" class='signUpForm'>
+          {% csrf_token %}
+          <div>
+            {{signform.first_name.label}}
+            {{signform.first_name}}
+          </div>
+          <div>
+            {{signform.last_name.label}}
+            {{signform.last_name}}
+          </div>
+          <div>
+            {{signform.username.label}}
+            {{signform.username}}
+          </div>
+          <div>
+            {{signform.email.label}}
+            {{signform.email}}
+          </div>
+          <div>
+            {{signform.password1.label}}
+            {{signform.password1}}
+          </div>
+          <div>
+            {{signform.password2.label}}
+            {{signform.password2}}
+          </div>
+          <input type="submit" value="sign up" class="submit">
+        </form>
+        <div class='error'>
+        {{signform.errors}}  
+        {{signform.password.errors}}
+        </div>
+        <p class="logInWith">sign up with</p>
+        <div class="social">
+          <a href="">
+            <img src="{% static 'img/dental-care.png' %}" alt="" />
+          </a>
+          <p class="or">or</p>
+          <a href="">
+            <img src="{% static 'img/dental-care.png' %}" alt="" />
+          </a>
+        </div>
+        <p class="sign">already have accounte <a href="{% url 'logIn' %}">log in</a></p>
+      </section>
+{% endblock content %}
+
+
+
+
+
+ 

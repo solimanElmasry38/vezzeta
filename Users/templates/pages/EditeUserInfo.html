@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="grad"></div>
+
+<section id='signUp'>
+    <h1> edite your profile </h1>
+    <form method='POST' class='signUpForm'>
+        {% csrf_token %}
+    
+    <div>
+        {{epif.phone.label}}
+        {{epif.phone}}
+    
+    </div>
+    <div>
+        {{epif.img.label}}
+        {{epif.img}}
+    
+    
+    </div>
+    <div>
+        {{euif.email.label}}
+        {{euif.email}}
+    
+    </div>
+    <div>
+        {{euif.first_name.label}}
+        {{euif.first_name}}
+    
+    </div>
+    <div>
+        {{euif.last_name.label}}
+        {{euif.last_name}}
+    
+    </div>
+    <input type="submit" value='save' class='submit'>
+    </form>
+    
+    
+</section>
+
+
+
+
+
+
+
+{% endblock content %}
